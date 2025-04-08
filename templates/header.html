@@ -1,0 +1,55 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <!-- Logo + Name as Home button -->
+      <a class="navbar-brand d-flex align-items-center" href="#" onclick="loadPage('home')">
+        <img src="/assets/logo.png" alt="Logo" width="32" height="32" class="me-2 d-none d-md-inline">
+        Hotel Mirage
+      </a>
+
+      <!-- Phone icon for narrow screens -->
+      <div class="d-flex align-items-center ms-auto">
+        <a href="tel:+15551234567" class="d-lg-none me-2" title="Call us">
+          <img src="/assets/call.png" alt="Call" width="28" height="28">
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler order-last" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('reservation.php')">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('testimonials.php')">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('about')">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+              <li><a class="dropdown-item" href="#" onclick="loadPage('faq')">FAQ</a></li>
+              <li><a class="dropdown-item" href="#" onclick="loadPage('gallery')">Gallery</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Right Side: Phone Number (DESKTOP) + Login/Sign Up -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="d-none d-lg-block">
+            <a href="tel:+15551234567" class="text-white text-decoration-none fw-bold">
+              (555) 123-4567
+            </a>
+          </div>
+          <a href="#" onclick="loadPage('signup')" class="btn btn-outline-light btn-sm">Login</a>
+          <a href="#" onclick="loadPage('signup')" class="btn btn-success btn-sm emphasis-button">Sign Up</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</header>
