@@ -27,6 +27,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('reservation.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Reservations</a></li>
           <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('testimonials.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('amenities.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Amenities</a></li>
           <li class="nav-item"><a class="nav-link" href="#" onclick="loadPage('about')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

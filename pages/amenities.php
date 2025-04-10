@@ -1,15 +1,16 @@
 <?php
 // Database connection
-$conn = new mysqli("localhost", "root", "", "hotel_db");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
+session_start();
+require_once __DIR__ . '/../db.php';
+
 
 // Fetch amenities
 $sql = "SELECT * FROM amenities";
-$result = $conn->query($sql);
-$amenities = $result->fetch_all(MYSQLI_ASSOC);
-$conn->close();
+$result = $conn->prepare($sql);
+$result->execute();
+$amenities = $result->get_result();
+
 ?>
 
 <!DOCTYPE html>
