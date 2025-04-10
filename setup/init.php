@@ -34,6 +34,23 @@ if ($count == 0) {
   echo "Room types already exist, skipping.\n";
 }
 
+$res = $conn->query("SELECT COUNT(*) AS count FROM amenities");
+$count = $res ? $res->fetch_assoc()['count'] : 0;
+
+if ($count == 0) {
+  echo "Seeding  amenities ...\n";
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Free Wi-Fi', 'fa fa-wifi', 'Available in all rooms and public areas.')");
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Swimming Pool', 'fa fa-swimmer', 'Outdoor pool with sun loungers.')");
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Fitness Center', 'fa fa-dumbbell', '24/7 gym access.')");
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Café', 'fa fa-coffee', 'Cozy café with snacks and drinks.')");
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Transportation', 'fa fa-shuttle-van', 'Shuttle and taxi services available.')");
+  $conn->query("INSERT IGNORE INTO amenities  (name, icon, description) VALUES ('Parking', 'fa fa-parking', 'Free on-site parking available.')");
+  echo " amenities inserted.\n";
+} else {
+  echo "amenities already exist, skipping.\n";
+}
+
+
 $res = $conn->query("SELECT COUNT(*) AS count FROM users");
 $count = $res ? $res->fetch_assoc()['count'] : 0;
 

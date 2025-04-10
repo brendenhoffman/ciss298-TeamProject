@@ -243,3 +243,13 @@ select:focus {
   margin-top: 20px;
 }
 
+/* amenities pag carousel*/
+.carousel-item {
+  min-height: 300px;
+}
+.amenity-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
