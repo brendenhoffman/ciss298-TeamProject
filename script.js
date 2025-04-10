@@ -15,6 +15,7 @@ function loadPage(page) {
   const fetchUrl = extension === "php"
     ? `load.php?page=${pageName}`
     : `pages/${fullFile}`;
+    console.log(fetchUrl);
 
   fetch(fetchUrl)
     .then(response => {

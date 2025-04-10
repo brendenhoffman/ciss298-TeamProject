@@ -36,19 +36,21 @@ CREATE TABLE IF NOT EXISTS gallery (
   uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE contact_messages (
+CREATE TABLE IF NOT EXISTS contact_messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(64),
     email VARCHAR(255),
     message TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-CREATE TABLE amenities (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(64) NOT NULL,
-    icon VARCHAR(255),
-    description TEXT
+CREATE TABLE IF NOT EXISTS events (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  description TEXT NOT NULL,
+  location VARCHAR(255) NOT NULL,
+  start_date DATE NOT NULL,
+  end_date DATE DEFAULT NULL,
+  start_time TIME NOT NULL,
+  end_time TIME NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
