@@ -6,7 +6,7 @@
 body {
   background-color: #1f1f23;
   color: #e0e0e0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .navbar-brand {
@@ -242,4 +242,3 @@ select:focus {
 #main {
   margin-top: 20px;
 }
-
