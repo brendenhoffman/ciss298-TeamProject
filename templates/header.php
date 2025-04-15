@@ -36,6 +36,7 @@
             <ul class="dropdown-menu text-end" aria-labelledby="moreDropdown">
               <li><a class="dropdown-item" href="#" onclick="loadPage('contactus')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</a></li>
               <li><a class="dropdown-item" href="#" onclick="loadPage('gallery.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Gallery</a></li>
+              <li><a class="dropdown-item" href="#" onclick="loadPage('weather.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Weather</a></li>
               <li><a class="dropdown-item" href="#" onclick="loadPage('events.php')" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Events</a></li>
             </ul>
           </li>

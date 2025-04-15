@@ -41,4 +41,5 @@ jobs:
             echo "DB_USER=root" >> .env
             echo "DB_PASS=${{ secrets.DB_PASS }}" >> .env
             echo "DB_NAME=hotel" >> .env
+            echo "WEATHER=${{ secrets.WEATHER }}" >> .env
 

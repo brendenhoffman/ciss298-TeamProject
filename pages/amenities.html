@@ -1,12 +1,12 @@
 <style>
     .carousel-item {
-      height: 300px;
+      height: 100%;
       background-size: cover;
       background-position: center;
       position: relative;
       color: white;
     }
-  
+
     .carousel-overlay {
       position: absolute;
       top: 0;
@@ -21,37 +21,41 @@
       text-align: center;
       padding: 1rem;
     }
-  
+
+    .carousel-inner {
+      height: 800px !important;
+    }
+
     /* Stack items vertically on mobile */
     @media (max-width: 768px) {
       .carousel {
         display: block !important;
       }
-  
+
       .carousel-inner {
         display: block !important;
       }
-  
+
       .carousel-item {
         display: block !important;
         position: relative !important;
         opacity: 1 !important;
         transition: none !important;
       }
-  
+
       .carousel-control-prev,
       .carousel-control-next {
         display: none;
       }
     }
   </style>
-  
+
   <div id="main" class="container-fluid px-0">
     <h2 class="text-center my-4">Our Amenities</h2>
-  
+
     <div id="staticAmenitiesCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-  
+
         <div class="carousel-item active" style="background-image: url('././../assets/amenities/wifi.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-wifi fa-3x mb-2"></i>
@@ -59,7 +63,7 @@
             <p>Available in all rooms and public areas.</p>
           </div>
         </div>
-  
+
         <div class="carousel-item" style="background-image: url('././../assets/amenities/pool.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-swimmer fa-3x mb-2"></i>
@@ -67,7 +71,7 @@
             <p>Outdoor pool with sun loungers.</p>
           </div>
         </div>
-  
+
         <div class="carousel-item" style="background-image: url('././../assets/amenities/gym.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-dumbbell fa-3x mb-2"></i>
@@ -75,7 +79,7 @@
             <p>24/7 gym access.</p>
           </div>
         </div>
-  
+
         <div class="carousel-item" style="background-image: url('././../assets/amenities/cafe.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-coffee fa-3x mb-2"></i>
@@ -83,7 +87,7 @@
             <p>Cozy café with snacks and drinks.</p>
           </div>
         </div>
-  
+
         <div class="carousel-item" style="background-image: url('././../assets/amenities/shuttle.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-shuttle-van fa-3x mb-2"></i>
@@ -91,7 +95,7 @@
             <p>Shuttle and taxi services available.</p>
           </div>
         </div>
-  
+
         <div class="carousel-item" style="background-image: url('././../assets/amenities/park.jpeg')">
           <div class="carousel-overlay">
             <i class="fa fa-parking fa-3x mb-2"></i>
@@ -99,9 +103,9 @@
             <p>Free on-site parking available.</p>
           </div>
         </div>
-  
+
       </div>
-  
+
       <!-- Carousel Controls (hidden on mobile) -->
       <button class="carousel-control-prev" type="button" data-bs-target="#staticAmenitiesCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
