@@ -14,7 +14,7 @@ if (!isset($_SESSION['login_attempts'])) {
   $_SESSION['last_attempt_time'] = time();
 }
 
-if ($_SESSION['login_attempts'] >= 5) {
+if ($_SESSION['login_attempts'] >= 3) {
   $elapsed = time() - $_SESSION['last_attempt_time'];
   if ($elapsed < 300) { // 5 minutes = 300 seconds
     $wait = 300 - $elapsed;
