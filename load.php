@@ -3,7 +3,24 @@
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
+session_start();
 header("Content-Type: text/html");
+
+// --- USER STORY E: Auto-logout after 10 minutes of inactivity ---
+if (isset($_SESSION['user'])) {
+  $now = time();
+  $lastActivity = $_SESSION['last_activity'] ?? $now;
+  $inactiveTime = $now - $lastActivity;
+
+  if ($inactiveTime > 300) {
+    session_unset();
+    session_destroy();
+    echo "<div class='m-5 alert alert-warning text-center'>You were logged out due to inactivity.</div>";
+    exit;
+  } else {
+    $_SESSION['last_activity'] = $now; // Update activity timestamp
+  }
+}
 
 if ($_SERVER["REQUEST_METHOD"] !== "GET" || empty($_GET['page'])) {
   http_response_code(403);
