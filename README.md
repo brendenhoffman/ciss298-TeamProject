@@ -26,12 +26,20 @@ DB NAME: hotel
 ```
 
 # Dynamic Page Loading
-The main page will load the content of other webpages without a full reload of the page. This is a very fast and smooth operation and it also simplifies the code required to write a page. You only need to write the content that would be contained in the `<main>` block. For example if home.html was:
+The main page will load the content of other webpages without a full reload of the page. This is a very fast and smooth operation and it also simplifies the code required to write a page.
+
+To create a button to load a new page, simply include a similar line in your html:
+```
+<a class="nav-link" href="#" onclick="loadPage('example1')">Example1</a> <-- To load html file. .html file extension may be included if you please -->
+<a class="nav-link" href="#" onclick="loadPage('example2.php')">Example2</a> <-- To load php. .php file extension MUST be included. -->
+```
+
+You only need to write the content that would be contained in the `<main>` block. For example if home.html was:
 ```
 <h1>Welcome!</h1>
 <p>This is the home page.</p>
 ```
-You would see the formatted contents in the body of the main page (index.php). This is not limited to html, php can be incorporated just by adding a `<?php` block, as well as javascript with a `<script>` block.
+You would see the formatted contents in the body of the main page (index.php). This is not limited to html, if a php file is loaded, anything in a `<?php` block will be executed. JavaScript will not be ran and it is suggested to include the JS in `script.js` and loaded via `document.getElementbyId()` or `document.querySelector()`, etc.
 
 # Forms and POST
 Due to the dynamic page loading the way forms are handled is a it different. The expected way to submit data is through JS, which will automatically fetch `${yourPageName}Form.php` to do any back end tasks, as long as you include the loadForm class. The page containing the form will almost always be plain HTML, however PHP that recieves data from the server is also allowed.
